@@ -2,7 +2,7 @@
 
 ![](images/natureImages.png)
 
-I used the node-fetch method to retrieve data from an external database, pixabay.
+I used the `node-fetch` method to retrieve data from an external database, pixabay.
 
 ## Steps Involved
 
@@ -10,7 +10,7 @@ I used the node-fetch method to retrieve data from an external database, pixabay
 1. Installed node-fetch `npm i node-fetch`
 1. Added Bootstrap into index.html
 1. Fetched API data 
-1. Handled State with useState & useEffect
+1. Handled State with `useState` & `useEffect`
 1. Add map function to loop through array and display many images
 
 ## My Array Map Example in React
@@ -26,3 +26,14 @@ I used the node-fetch method to retrieve data from an external database, pixabay
 
 * index is the index value of the array, animalImages 
 * use curly brackets to embed javascript in html
+
+## My Fetch Example
+
+```javascript
+fetch(`https://pixabay.com/api/?key=${key}&q=${color}+${noun}&image_type=photo`)
+    .then(res => res.json())
+    .then(json => {
+      console.log(json)}
+```
+
+* `${key}` is a template literal that uses backticks to insert a const in a string
